@@ -3,4 +3,6 @@
 [ext_resource path="res://character/components/DamageEmitter/DamageEmitter.gd" type="Script" id=1]
 
 [node name="DamageEmitter" type="Area2D"]
+collision_layer = 512
+collision_mask = 512
 script = ExtResource( 1 )

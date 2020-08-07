@@ -16,12 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="git project"
+run/main_scene="res://test/test_scene.tscn"
 config/icon="res://icon.png"
 
 [layer_names]
 
 2d_physics/layer_1="General"
-2d_physics/layer_10="Damage"
+2d_physics/layer_10="Damage Emitter"
+2d_physics/layer_11="Damage Detector"
 
 [rendering]
 
