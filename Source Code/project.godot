@@ -18,6 +18,11 @@ _global_script_class_icons={
 config/name="git project"
 config/icon="res://icon.png"
 
+[layer_names]
+
+2d_physics/layer_1="General"
+2d_physics/layer_10="Damage"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
