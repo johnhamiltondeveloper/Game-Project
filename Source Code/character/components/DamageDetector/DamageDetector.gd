@@ -6,5 +6,5 @@ signal DamageTaken
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	print(get_overlapping_areas())
+func SignalDamage():
+	print("Damage")

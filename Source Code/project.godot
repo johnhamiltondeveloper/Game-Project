@@ -22,8 +22,7 @@ config/icon="res://icon.png"
 [layer_names]
 
 2d_physics/layer_1="General"
-2d_physics/layer_10="Damage Emitter"
-2d_physics/layer_11="Damage Detector"
+2d_physics/layer_10="Damage"
 
 [rendering]
 
