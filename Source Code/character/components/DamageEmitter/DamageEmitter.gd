@@ -2,19 +2,33 @@ extends Area2D
 
 signal Damage
 
-export(int) var Damage
-export(int) var knockBack
+enum DamageType {Once,Continuous}
+export(DamageType) var mode = DamageType.Once
+export(float) var time = 1
+export(int) var Damage = 1
+export(int) var knockBack = 1
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _process(delta):
-	position += Vector2(0.5,0)
+	
+	self.position += Vector2(0.4,0)
+	
+	if mode == DamageType.Once:
+		return
+		
+	if($Timer.is_stopped()):
+		$Timer.start(time)
+		emit_signal("Damage",Damage,knockBack)
 
 func _on_DamageEmitter_area_entered(area):
+	
 	if not is_connected("Damage",area,"SignalDamage"):
 		self.connect("Damage",area,"SignalDamage")
-		print("enter")
+		
+		if mode == DamageType.Once:
+			emit_signal("Damage",Damage,knockBack)
 
 func _on_DamageEmitter_area_exited(area):
 	if is_connected("Damage",area,"SignalDamage"):

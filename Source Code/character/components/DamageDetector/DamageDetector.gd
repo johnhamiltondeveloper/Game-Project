@@ -6,5 +6,6 @@ signal DamageTaken
 func _ready():
 	pass # Replace with function body.
 
-func SignalDamage():
-	print("Damage")
+func SignalDamage(damage,knock_back):
+	print("Damage: ",damage)
+	print("Knock_back ", knock_back)
